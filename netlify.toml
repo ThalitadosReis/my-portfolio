@@ -1,9 +1,16 @@
 [build]
-command = "npm run build"
-functions = "functions"
+  functions = "functions"
 
-[build.environment]
-NODE_VERSION = "16.x"
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
 
-[functions]
-directory = "functions"
+[[redirects]]
+  from = "/.netlify/functions/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
+[dev]
+  functions = "functions"
+  publish = "public"
