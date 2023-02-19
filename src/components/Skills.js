@@ -46,6 +46,7 @@ export default function Skills() {
                     <li>Javascript(ES6)</li>
                     <li>HTML</li>
                     <li>CSS</li>
+                    <li>Bootstrap</li>
                   </ul>
                 </div>
                 <div className="item">
