@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import contactImg from "../assets/img/contact-img.svg";
+import contactImg from "../assets/img/contact-img.png";
 import "animate.css";
 
 export default function Contact() {
@@ -60,7 +60,7 @@ export default function Contact() {
       <Container>
         <Row className="align-items-center">
           <Col size={12} md={6}>
-            <img src={contactImg} alt="Contact Us" />
+            <img src={contactImg} alt="Contact Me" />
           </Col>
           <Col size={12} md={6}>
             <div>

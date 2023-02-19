@@ -378,10 +378,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .contact {
   background-color: #121212;
   padding: 60px 0 60px 0;
+
 }
 
 .contact img {
-  width: 80%;
+  width: 90%;
 }
 
 .contact h2 {
