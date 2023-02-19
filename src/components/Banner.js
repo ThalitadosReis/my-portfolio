@@ -17,33 +17,32 @@ export default function Banner() {
                     isVisible ? "animate__animated animate__fadeIn" : ""
                   }
                 >
-                  <span style={{color: "#f9a826"}}>Welcome to my Portfolio</span>
+                  <span style={{ color: "#f9a826" }}>
+                    Welcome to my Portfolio
+                  </span>
                   <h1>
-                    Hi! I'm Thalita,{" "}
-                    <br />
+                    Hi! I'm Thalita, <br />
                     and I build things
                     <span style={{ color: "#f9a826" }}>.</span>
                   </h1>
                   <p>
-                    I'm a tech-loving junior full-stack developer who gets a thrill from building innovative applications. With experience in both front-end and back-end development, I can bring a unique perspective to any project. 
+                    I'm a tech-loving junior full-stack developer who gets a
+                    thrill from building innovative applications. With
+                    experience in both front-end and back-end development, I can
+                    bring a unique perspective to any project.
                   </p>
-                  <a href="https://drive.google.com/drive/folders/1Dq8b6aPyxfDkMlHRrKs9ZOeYaILseCI3?usp=sharing"> View Resume <ArrowRightCircle size={25} /></a>
+                  <a href="https://drive.google.com/drive/folders/1Dq8b6aPyxfDkMlHRrKs9ZOeYaILseCI3?usp=sharing">
+                    {" "}
+                    View Resume <ArrowRightCircle size={25} />
+                  </a>
                 </div>
               )}
             </TrackVisibility>
           </Col>
           <Col xs={12} md={6} xl={5}>
-            <TrackVisibility>
-              {({ isVisible }) => (
-                <div
-                  className={
-                    isVisible ? "animate__animated animate__zoomIn" : ""
-                  }
-                >
-                  <img src={headerImg} alt="Header Img" />
-                </div>
-              )}
-            </TrackVisibility>
+            <div>
+              <img src={headerImg} alt="Header Img" />
+            </div>
           </Col>
         </Row>
       </Container>
