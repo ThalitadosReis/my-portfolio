@@ -1,7 +1,6 @@
 import { BrowserRouter as Router } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
-import { HashLink } from "react-router-hash-link";
 
 export default function NavBar() {
   const [activeLink, setActiveLink] = useState("home");

@@ -25,12 +25,9 @@ export default function Banner() {
                     <span style={{ color: "#f9a826" }}>.</span>
                   </h1>
                   <p>
-                    I am an enthusiastic Junior Full-Stack Developer with a
-                    love for crafting amazing web applications.
+                    I'm a tech-loving junior full-stack developer who gets a thrill from building innovative applications. With experience in both front-end and back-end development, I can bring a unique perspective to any project. 
                   </p>
-                  <button onClick={() => console.log("connect")}>
-                    Download CV <ArrowRightCircle size={25} />
-                  </button>
+                  <a href="https://drive.google.com/drive/folders/1Dq8b6aPyxfDkMlHRrKs9ZOeYaILseCI3?usp=sharing"> View Curriculum <ArrowRightCircle size={25} /></a>
                 </div>
               )}
             </TrackVisibility>

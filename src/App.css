@@ -89,7 +89,8 @@ nav.navbar {
 }
 
 nav.navbar.scrolled {
-  background-color: #000;
+  background: transparent;
+  backdrop-filter: blur(10px);
 }
 
 nav.navbar a.navbar-brand span,
@@ -190,22 +191,28 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.8px;
 }
 
-.banner button {
+.banner a {
   color: #f9f9f9;
   font-weight: 600;
   font-size: 20px;
+  text-decoration: none;
   margin-top: 40px;
 
   display: flex;
   align-items: center;
 }
 
-.banner button svg {
+.banner a:hover {
+  color: #f9f9f9;
+
+}
+
+.banner a svg {
   margin-left: 10px;
   transition: 0.3s ease-in-out;
 }
 
-.banner button:hover svg {
+.banner a:hover svg {
   margin-left: 25px;
 }
 
@@ -236,7 +243,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .skill-bx {
-  background: #000;
+  background: #121212;
   text-align: center;
   border-radius: 30px;
   padding: 50px 50px;
