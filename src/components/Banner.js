@@ -27,7 +27,7 @@ export default function Banner() {
                   <p>
                     I'm a tech-loving junior full-stack developer who gets a thrill from building innovative applications. With experience in both front-end and back-end development, I can bring a unique perspective to any project. 
                   </p>
-                  <a href="https://drive.google.com/drive/folders/1Dq8b6aPyxfDkMlHRrKs9ZOeYaILseCI3?usp=sharing"> View Curriculum <ArrowRightCircle size={25} /></a>
+                  <a href="https://drive.google.com/drive/folders/1Dq8b6aPyxfDkMlHRrKs9ZOeYaILseCI3?usp=sharing"> View Resume <ArrowRightCircle size={25} /></a>
                 </div>
               )}
             </TrackVisibility>
