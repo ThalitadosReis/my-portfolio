@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Col } from "react-bootstrap";
-import Modal from "https://cdn.skypack.dev/react-modal@3.16.1";
+import Modal from 'react-modal';
+
 
 const customStyles = {
   content: {
