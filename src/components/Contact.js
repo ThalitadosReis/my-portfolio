@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import contactImg from "../assets/img/contact-img.png";
-import "animate.css";
 
 export default function Contact() {
   const formInitialDetails = {
