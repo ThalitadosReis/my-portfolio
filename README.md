@@ -1,8 +1,13 @@
-# Getting Started with Create React App
+# Personal Portfolio
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+![Portfolio Screenshot](./src/assets/screenshot.png)
+
+Built using:
+
+* Front-end library: React
+* CSS framework: React-bootstrap
 
 In the project directory, you can run:
 
