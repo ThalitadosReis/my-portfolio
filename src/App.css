@@ -303,6 +303,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .page-content {
+  cursor: pointer;
   position: relative;
   overflow: hidden;
   border-radius: 30px;
