@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Col } from "react-bootstrap";
-import Modal from 'react-modal';
-
+import Modal from "react-modal";
+import TrackVisibility from "react-on-screen";
+import "animate.css";
 
 const customStyles = {
   content: {
@@ -23,8 +24,14 @@ const customStyles = {
   },
 };
 
-export default function ProjectCard({ title, tech, imgUrl, demoUrl, about, githubUrl }) {
-
+export default function ProjectCard({
+  title,
+  tech,
+  imgUrl,
+  demoUrl,
+  about,
+  githubUrl,
+}) {
   const [isOpen, setIsOpen] = useState(false);
 
   const openModal = () => {
@@ -40,13 +47,16 @@ export default function ProjectCard({ title, tech, imgUrl, demoUrl, about, githu
       <div className="page-content" onClick={openModal}>
         <img src={imgUrl} alt="" />
       </div>
-      <Modal
-        isOpen={isOpen}
-        onRequestClose={closeModal}
-        style={customStyles}
-      >
+      <Modal isOpen={isOpen} onRequestClose={closeModal} style={customStyles}>
         <div className="modal-content">
-          <h4>{title}</h4>
+          <TrackVisibility>
+            {({ isVisible }) => (
+              <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
+                <h4>{title}</h4>
+              </div>
+            )}
+          </TrackVisibility>
+
           <p>{about}</p>
           <p className="tech-stack">
             <b>Tech stack:</b> {tech}
