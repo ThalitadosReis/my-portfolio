@@ -15,7 +15,7 @@ export default function Projects() {
       demoUrl: "https://moonlight-events.netlify.app/",
       githubUrl: "https://github.com/orgs/JoTa-Events/repositories",
       about:
-        "Moonlight is a web application that aims to provide users with an easy and convenient way to discover and attend various events such as concerts, festivals, and more. The platform allows users to browse through a variety of events. Additionally, Moonlight features a live chat functionality that enables attendees to connect with each other and discuss the event in real-time. This feature helps to create a sense of community and allows users to socialize with other like-minded individuals who share similar interests. Overall, Moonlight provides a seamless and enjoyable event experience that connects people with their favorite artists and helps to create lasting memories.",
+        "Moonlight is a web app for discovering and attending events with a live chat feature for connecting attendees in real-time. It creates a sense of community and enables users to socialize with like-minded individuals. Moonlight provides a seamless event experience, connecting people with their favorite artists and creating lasting memories.",
     },
     {
       id: "Outbackers",
@@ -25,7 +25,7 @@ export default function Projects() {
       demoUrl: "https://outbackers.adaptable.app/",
       githubUrl: "https://github.com/ironhack-outbackers-project/outbackers",
       about:
-        "Outbackers is a web platform designed to connect backpackers with temporary job and housing opportunities while traveling. The platform provides a centralized location for backpackers to search for work and accommodation options, and enables users to connect with one another to share information and advice. The goal of the platform is to make it easier for backpackers to navigate the challenges of traveling and working in unfamiliar locations, and to help them make the most of their experiences while on the road.",
+        "Outbackers is a web platform that connects backpackers with temporary job and housing opportunities. It offers a centralized location for searching work and accommodation, and enables users to connect with each other for information and advice. Outbackers makes it easier for backpackers to navigate traveling and working in unfamiliar locations and enjoy their experiences on the road.",
     },
     {
       id: "Yoshi Run",
@@ -53,7 +53,7 @@ export default function Projects() {
                 invite you to take a look around, and explore what I have to
                 offer. Thank you for visiting!
               </p>
-              <Row>
+              <Row style={{margin: "auto"}}>
                 {projects.map((project, id) => {
                   return <ProjectCard key={id} {...project} />;
                 })}
