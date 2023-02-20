@@ -1,19 +1,61 @@
+import { useState } from "react";
 import { Col } from "react-bootstrap";
-import { ArrowRightShort } from "react-bootstrap-icons";
+import Modal from "https://cdn.skypack.dev/react-modal@3.16.1";
 
-export default function ProjectCard({ title, tech, imgUrl, demoUrl, about, githubUrl }){
+const customStyles = {
+  content: {
+    top: "50%",
+    left: "50%",
+    right: "auto",
+    bottom: "auto",
+    width: "80%",
+    height: "auto",
+    marginRight: "-50%",
+    transform: "translate(-50%, -50%)",
+    backgroundColor: "#121212",
+    border: 0,
+    borderRadius: "30px",
+    padding: "20px",
+  },
+  overlay: {
+    backgroundColor: "rgba(0, 0, 0, 0.7)",
+  },
+};
+
+export default function ProjectCard({ title, tech, imgUrl, demoUrl, about, githubUrl }) {
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const openModal = () => {
+    setIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsOpen(false);
+  };
+
   return (
     <Col size={12} sm={6} md={4}>
-      <div className="project-box">
+      <div className="page-content" onClick={openModal}>
         <img src={imgUrl} alt="" />
-        <div className="project-content">
-          <h4>{title}</h4>
-          <a href={demoUrl}>Check it out</a>
-          <p>{about}</p>
-          <p className="tech-stack"><span style={{color: "#f9a826"}}>Tech stack:</span> {tech}</p>
-          <a href={githubUrl}>Github <ArrowRightShort size={20} /></a>
-        </div>
       </div>
+      <Modal
+        isOpen={isOpen}
+        onRequestClose={closeModal}
+        style={customStyles}
+      >
+        <div className="modal-content">
+          <h4>{title}</h4>
+          <p>{about}</p>
+          <p className="tech-stack">
+            <b>Tech stack:</b> {tech}
+          </p>
+          <div className="modal-links">
+            <a href={demoUrl}>Demo</a>
+            <a href={githubUrl}>Github</a>
+          </div>
+        </div>
+      </Modal>
     </Col>
-  )
+  );
 }

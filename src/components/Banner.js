@@ -17,13 +17,13 @@ export default function Banner() {
                     isVisible ? "animate__animated animate__fadeIn" : ""
                   }
                 >
-                  <span style={{ color: "#f9a826" }}>
+                  <span style={{ color: "#e3d35a" }}>
                     Welcome to my Portfolio
                   </span>
                   <h1>
                     Hi! I'm Thalita, <br />
                     and I build things
-                    <span style={{ color: "#f9a826" }}>.</span>
+                    <span style={{ color: "#e3d35a" }}>.</span>
                   </h1>
                   <p>
                     I'm a tech-loving junior full-stack developer who gets a

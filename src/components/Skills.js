@@ -27,7 +27,7 @@ export default function Skills() {
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <div className="skill-bx wow zoomIn">
+            <div className="skill-bx">
               <h2>Skills</h2>
               <br />
               <Carousel

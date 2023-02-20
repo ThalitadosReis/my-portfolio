@@ -69,7 +69,7 @@ export default function NavBar() {
                 Projects
               </Nav.Link>
               <Nav.Link
-                style={{ color: "#f9a826" }}
+                style={{ color: "#e3d35a" }}
                 href="#connect"
                 className={
                   activeLink === "connect"
