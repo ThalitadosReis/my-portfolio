@@ -9,8 +9,8 @@ export default function ProjectCard({
   githubUrl,
 }) {
   return (
-    <Col style={{ display: "flex", flexWrap: "wrap" }}>
-      <div className="project-card" style={{ display: "flex" }}>
+    <Col style={{ display: "flex"}}>
+      <div className="project-card">
         <div className="img">
           <img src={imgUrl} alt="" />
         </div>
