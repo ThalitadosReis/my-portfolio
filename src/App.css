@@ -310,13 +310,24 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   overflow: hidden;
   margin: 1rem auto;
 
-  min-width: 400px;
+  width: 100%;
   max-width: 400px;
 
   display: flex;
   flex-direction: column;
 }
 
+@media screen and (min-width: 768px) {
+  .project-card {
+    max-width: 350px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .project-card {
+    max-width: 400px;
+  }
+}
 
 .project-card img {
   width: 100%;
@@ -339,6 +350,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .project-card .connect {
   background-color: #171717;
   padding: 1.5em;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .project-card .connect a {
