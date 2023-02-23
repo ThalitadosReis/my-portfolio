@@ -52,7 +52,7 @@ export default function Projects() {
                 invite you to take a look around, and explore what I have to
                 offer. Thank you for visiting!
               </p>
-              <Row style={{margin: "auto"}}>
+              <Row>
                 {projects.map((project, id) => {
                   return <ProjectCard key={id} {...project} />;
                 })}

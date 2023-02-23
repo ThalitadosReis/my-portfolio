@@ -9,15 +9,15 @@ export default function ProjectCard({
   githubUrl,
 }) {
   return (
-    <Col style={{ display: "flex"}}>
+    <Col style={{ display: "flex" }}>
       <div className="project-card">
         <div className="img">
           <img src={imgUrl} alt="" />
         </div>
         <span>{title}</span>
-        <div className="card-body" >
-          <p className="info">{about}</p>
-          <p className="info">
+        <div className="card-body">
+          <p>{about}</p>
+          <p>
             <b>Tech stack: </b>
             {tech}
           </p>
