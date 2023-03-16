@@ -1,5 +1,4 @@
 import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
 import banner from "../assets/img/skills-bg.png";
 
 export default function Skills() {
@@ -73,6 +72,7 @@ export default function Skills() {
                     <li>Time-management</li>
                     <li>Well-organized</li>
                     <li>Avid learner</li>
+                    <li>Problem solving</li>
                   </ul>
                 </div>
               </Carousel>

@@ -1,15 +1,14 @@
-import ProjectCard from "./ProjectCard";
 import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
-import { Container, Row, Col } from "react-bootstrap";
+import ProjectCard from "./ProjectCard";
 
 export default function Projects() {
   const projects = [
     {
       id: "Moonlight",
       title: "Moonlight",
-      tech: "React.js, CSS, Node.js, Express.js, MongoDB, Socket.io",
+      tech: "JavaScript, React.js, CSS, Node.js, Express.js, MongoDB, Socket.io",
       imgUrl: projImg1,
       demoUrl: "https://moonlight-events.netlify.app/",
       githubUrl: "https://github.com/orgs/JoTa-Events/repositories",
@@ -40,27 +39,25 @@ export default function Projects() {
 
   return (
     <section className="project" id="projects">
-      <Container>
-        <Row>
-          <Col size={12}>
-            <div>
-              <h2>Projects</h2>
-              <p>
-                Here, you can find an overview of my projects and experience.
-                I'm constantly looking for ways to improve my craft, and this
-                web application serves as a platform to showcase my progress. I
-                invite you to take a look around, and explore what I have to
-                offer. Thank you for visiting!
-              </p>
-              <Row>
-                {projects.map((project, id) => {
-                  return <ProjectCard key={id} {...project} />;
-                })}
-              </Row>
+      <div className="container">
+        <div className="row">
+          <div className="col-12">
+            <h2>Projects</h2>
+            <p>
+              Here, you can find an overview of my projects and experience. I'm
+              constantly looking for ways to improve my craft, and this web
+              application serves as a platform to showcase my progress. I invite
+              you to take a look around, and explore what I have to offer. Thank
+              you for visiting!
+            </p>
+            <div className="row">
+              {projects.map((project, id) => {
+                return <ProjectCard key={id} {...project} />;
+              })}
             </div>
-          </Col>
-        </Row>
-      </Container>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }

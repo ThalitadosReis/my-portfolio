@@ -18,6 +18,8 @@ body {
   background-color: #171717 !important;
   color: #f9f9f9 !important;
   font-family: "Roboto";
+  -webkit-font-smoothing: antialiased;
+
 }
 
 h1,
@@ -277,9 +279,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 /* h2 - skills, projects, contact title */
-.project h2,
-.skill h2,
-.contact h2 {
+h2 {
   color: #e3d35a;
   font-size: 45px;
   font-weight: 700;
@@ -290,86 +290,54 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .project {
   text-align: center;
   background-color: #000;
-  position: relative;
-  padding: 80px 0;
+  padding: 50px 0;
+  margin: auto;
 }
 
 .project p {
   font-size: 18px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
-  margin: 15px auto;
+  margin: 10px auto;
   width: 70%;
+}
+
+.project .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 -11px;
+}
+
+.project .col {
+  display: flex;
+  flex: 1 0 22em;
+  padding: 0 11px;
 }
 
 /* project card */
 .project-card {
   color: #f9f9f9;
   background-color: #171717;
-  border-radius: 30px;
   overflow: hidden;
-  margin: 1rem auto;
-
-  width: 100%;
-  max-width: 400px;
-
-  display: flex;
-  flex-direction: column;
-}
-
-@media screen and (min-width: 768px) {
-  .project-card {
-    max-width: 350px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .project-card {
-    max-width: 400px;
-  }
-}
-
-.project-card img {
-  width: 100%;
+  border-radius: 30px;
+  width: auto;
+  min-width: 20em;
 }
 
 .project-card p {
   text-align: justify;
-  font-size: .85em;
+  font-size: .8em;
   width: 100%;
-  padding: 0 1rem;
-  margin-top: 0;
 }
 
-.project-card span {
-  font-size: 1.5em;
-  font-weight: bold;
-  padding: 1rem;
-}
-
-.project-card .connect {
-  background-color: #171717;
-  padding: 1.5em;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.project-card .connect a {
-  color: #f9f9f9;
+.project-card .links {
   font-size: 0.85em;
-  text-decoration: none;
-  border: 1px solid #f9f9f9;
-  border-radius: 30px;
-  margin: 0 .5rem;
-  padding: .5rem 1.5rem;
+  margin: 0 .5em;
+  padding: .5em 1.5em;
 }
 
-.project-card a:hover {
-  color: #000;
-  background-color: #f9f9f9;
-}
+
 
 /* contact section */
 .contact {
