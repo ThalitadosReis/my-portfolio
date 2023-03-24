@@ -19,7 +19,6 @@ body {
   color: #f9f9f9 !important;
   font-family: "Roboto";
   -webkit-font-smoothing: antialiased;
-
 }
 
 h1,
@@ -31,6 +30,13 @@ h6 {
   margin: 0;
   padding: 0;
   line-height: normal;
+}
+
+h2 {
+  color: #e3d35a;
+  font-size: 45px;
+  font-weight: 700;
+  margin-bottom: 25px;
 }
 
 p,
@@ -207,7 +213,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .banner a:hover {
   color: #f9f9f9;
-
 }
 
 .banner a svg {
@@ -278,14 +283,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: -4;
 }
 
-/* h2 - skills, projects, contact title */
-h2 {
-  color: #e3d35a;
-  font-size: 45px;
-  font-weight: 700;
-  margin-bottom: 25px;
-}
-
 /* projects section */
 .project {
   text-align: center;
@@ -337,13 +334,10 @@ h2 {
   padding: .5em 1.5em;
 }
 
-
-
 /* contact section */
 .contact {
   background-color: #171717;
   padding: 60px 0 60px 0;
-
 }
 
 .contact img {
