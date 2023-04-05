@@ -35,43 +35,31 @@ export default function Skills() {
                 className="owl-carousel owl-theme skill-slider"
               >
                 <div className="item">
-                  <h5>
-                    Frontend
-                    <br />
-                    Development
-                  </h5>
+                  <h5 className="mb-3">Frontend Development</h5>
                   <ul>
-                    <li>React</li>
                     <li>Javascript(ES6)</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
+                    <li>React</li>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
                     <li>Bootstrap</li>
                   </ul>
                 </div>
                 <div className="item">
-                  <h5>
-                    Backend
-                    <br />
-                    Development
-                  </h5>
+                  <h5 className="mb-3">Backend Development</h5>
                   <ul>
                     <li>Node.js</li>
                     <li>Express.js</li>
+                    <li>Postman</li>
                     <li>MongoDB</li>
                     <li>REST APIs</li>
                   </ul>
                 </div>
                 <div className="item">
-                  <h5>
-                    Soft
-                    <br />
-                    Skills
-                  </h5>
+                  <h5 className="mb-3">Interpersonal Skills</h5>
                   <ul>
                     <li>Adaptability</li>
-                    <li>Time-management</li>
-                    <li>Well-organized</li>
-                    <li>Avid learner</li>
+                    <li>Communication</li>
+                    <li>Leadership</li>
                     <li>Problem solving</li>
                   </ul>
                 </div>
