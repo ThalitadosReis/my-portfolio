@@ -22,7 +22,7 @@ export default function Banner() {
                 front-end and back-end development, I can bring a unique
                 perspective to any project.
               </p>
-              <a href={resume} download="Thalita dos Reis resume.pdf">
+              <a href={resume} download="Thalita dos Reis Resume.pdf">
                 {" "}
                 Download Resume <ArrowRightCircle size={25} />
               </a>
