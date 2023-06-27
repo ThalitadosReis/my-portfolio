@@ -2,10 +2,10 @@ const nodemailer = require("nodemailer");
 
 exports.handler = async (event) => {
   const contactEmail = nodemailer.createTransport({
-    service: 'gmail',
+    service: "gmail",
     auth: {
       user: "dosreistha@gmail.com",
-      pass: "cbvrljhidvjdrtpp"
+      pass: "cbvrljhidvjdrtpp",
     },
   });
 
@@ -33,7 +33,7 @@ exports.handler = async (event) => {
     await contactEmail.sendMail(mail);
     return {
       statusCode: 200,
-      body: JSON.stringify({ code: 200, status: "Message Sent" }),
+      body: JSON.stringify({ message: "Email sent successfully" }),
     };
   } catch (error) {
     return {

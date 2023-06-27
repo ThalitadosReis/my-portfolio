@@ -28,25 +28,24 @@ export default function Contact() {
       const response = await fetch("/.netlify/functions/sendEmail", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json;charset=utf-8",
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(formDetails),
       });
 
       const result = await response.json();
-
       if (result.code === 200) {
         setStatus({ success: true, message: "Message sent successfully" });
       } else {
         setStatus({
           success: false,
-          message: "Something went wrong, please try again later.",
+          message: "Failed to send message",
         });
       }
     } catch (error) {
       setStatus({
         success: false,
-        message: "Something went wrong, please try again later.",
+        message: "Failed to send message",
       });
     } finally {
       setButtonText("Send");
