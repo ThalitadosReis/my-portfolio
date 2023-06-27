@@ -7,8 +7,8 @@
   status = 200
 
 [[redirects]]
-  from = "/.netlify/functions/*"
-  to = "/.netlify/functions/:splat"
+  from = "/functions/*"
+  to = "/functions/:splat"
   status = 200
 
 [dev]
