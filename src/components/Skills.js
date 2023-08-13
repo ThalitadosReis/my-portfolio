@@ -1,5 +1,5 @@
+import { Container, Row, Col } from "react-bootstrap";
 import Carousel from "react-multi-carousel";
-import banner from "../assets/img/skills-bg.png";
 
 export default function Skills() {
   const responsive = {
@@ -23,12 +23,11 @@ export default function Skills() {
 
   return (
     <section className="skill" id="skills">
-      <div className="container">
-        <div className="row">
-          <div className="col-12">
+      <Container>
+        <Row>
+          <Col md={12}>
             <div className="skill-bx">
               <h2>Skills</h2>
-              <br />
               <Carousel
                 responsive={responsive}
                 infinite={true}
@@ -65,10 +64,9 @@ export default function Skills() {
                 </div>
               </Carousel>
             </div>
-          </div>
-        </div>
-      </div>
-      <img className="background-image" src={banner} alt="background-img" />
+          </Col>
+        </Row>
+      </Container>
     </section>
   );
 }
