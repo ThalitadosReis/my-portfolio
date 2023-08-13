@@ -1,47 +1,44 @@
+import React from "react";
 import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
-import ProjectCard from "./ProjectCard";
+
+const projects = [
+  {
+    title: "Moonlight",
+    tech: "Tech stack included JavaScript, React.js, CSS, Node.js, Express.js, MongoDB, and Socket.io",
+    imgUrl: projImg1,
+    demoUrl: "https://moonlight-events.netlify.app/",
+    githubUrl: "https://github.com/orgs/JoTa-Events/repositories",
+    about:
+      "A real-time event discovery platform with live chat for attendees to connect and enhance experiences.",
+  },
+  {
+    title: "Outbackers",
+    tech: "Tech stack included HTML, CSS, Handlebars, Javascript, Express.js, and MongoDB",
+    imgUrl: projImg2,
+    demoUrl: "https://outbackers.adaptable.app/",
+    githubUrl: "https://github.com/ironhack-outbackers-project/outbackers",
+    about:
+      "Connecting backpackers to temporary jobs and housing opportunities for a seamless exploration experience.",
+  },
+  {
+    title: "Yoshi Run",
+    tech: "Tech stack included Javascript, HTML, and CSS",
+    imgUrl: projImg3,
+    demoUrl: "https://thalitadosreis.github.io/yoshi-run/",
+    githubUrl: "https://github.com/ThalitadosReis/yoshi-run",
+    about:
+      "A simple, fun, and engaging web-based game with a lovable character jumping over obstacles.",
+  },
+];
 
 export default function Projects() {
-  const projects = [
-    {
-      id: "Moonlight",
-      title: "Moonlight",
-      tech: "JavaScript, React.js, CSS, Node.js, Express.js, MongoDB, Socket.io",
-      imgUrl: projImg1,
-      demoUrl: "https://moonlight-events.netlify.app/",
-      githubUrl: "https://github.com/orgs/JoTa-Events/repositories",
-      about:
-        "Moonlight is a web app for discovering and attending events with a live chat feature for connecting attendees in real-time. It creates a sense of community and enables users to socialize with like-minded individuals. Moonlight provides a seamless event experience, connecting people with their favorite artists and creating lasting memories.",
-    },
-    {
-      id: "Outbackers",
-      title: "Outbackers",
-      tech: "HTML, CSS, Handlebars, Javascript, Express.js, MongoDB",
-      imgUrl: projImg2,
-      demoUrl: "https://outbackers.adaptable.app/",
-      githubUrl: "https://github.com/ironhack-outbackers-project/outbackers",
-      about:
-        "Outbackers is a web platform that connects backpackers with temporary job and housing opportunities. It offers a centralized location for searching work and accommodation, and enables users to connect with each other for information and advice. Outbackers makes it easier for backpackers to navigate traveling and working in unfamiliar locations and enjoy their experiences on the road.",
-    },
-    {
-      id: "Yoshi Run",
-      title: "Yoshi Run",
-      tech: "Javascript, HTML, CSS",
-      imgUrl: projImg3,
-      demoUrl: "https://thalitadosreis.github.io/yoshi-run/",
-      githubUrl: "https://github.com/ThalitadosReis/yoshi-run",
-      about:
-        "Yoshi Run is a simple, yet fun web-based game that features the popular video game character, Yoshi. In this game, players must help Yoshi run as far as possible by jumping over incoming obstacles. The game requires quick reflexes and timing. Yoshi Run is an entertaining way to pass the time, and its intuitive gameplay makes it enjoyable for all ages.",
-    },
-  ];
-
   return (
     <section className="project" id="projects">
       <div className="container">
         <div className="row">
-          <div className="col-12">
+          <div className="my-5">
             <h2>Projects</h2>
             <p>
               Here, you can find an overview of my projects and experience. I'm
@@ -50,10 +47,27 @@ export default function Projects() {
               you to take a look around, and explore what I have to offer. Thank
               you for visiting!
             </p>
-            <div className="row">
-              {projects.map((project, id) => {
-                return <ProjectCard key={id} {...project} />;
-              })}
+            <div className="project-container mt-5">
+              {projects.map((project, id) => (
+                <div className="project-content" key={project.id}>
+                  <img src={project.imgUrl} alt={project.title} />
+                  <div className="content">
+                    <h4>{project.title}</h4>
+                    <p>
+                      {project.about}
+                      <br />
+                      <br />
+                      <span style={{ color: "#e38035" }}>{project.tech}</span>
+                    </p>
+                    <div className="link-container">
+                      <a href={project.githubUrl}>Github</a>
+                      <a className="btn btn-light" href={project.demoUrl}>
+                        Demo
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>

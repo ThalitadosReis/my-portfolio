@@ -36,7 +36,6 @@ h2 {
   color: #e3d35a;
   font-size: 45px;
   font-weight: 700;
-  margin-bottom: 25px;
 }
 
 p,
@@ -49,10 +48,12 @@ ul {
   line-height: normal;
   list-style: none;
   text-decoration: none;
+  color: #fff;
 }
 
 a:hover {
   text-decoration: none;
+  color: #fff;
 }
 
 img {
@@ -76,14 +77,6 @@ select:focus {
     max-width: 100%;
     padding: 0 150px;
   }
-}
-
-p.success {
-  color: green;
-}
-
-p.danger {
-  color: red;
 }
 
 /* navbar */
@@ -287,8 +280,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .project {
   text-align: center;
   background-color: #000;
-  padding: 50px 0;
-  margin: auto;
 }
 
 .project p {
@@ -299,160 +290,69 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 70%;
 }
 
-.project .row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 0 -11px;
-}
-
-.project .col {
-  display: flex;
-  flex: 1 0 22em;
-  padding: 0 11px;
+/* project container */
+.project-container {
+  display: grid;
+  justify-content: center;
+  grid-gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 350px));
 }
 
 /* project card */
-.project-card {
-  color: #f9f9f9;
-  background-color: #171717;
-  overflow: hidden;
+.content {
+  text-align: start;
+  padding: 1rem;
+}
+
+.project-content img {
   border-radius: 30px;
-  width: auto;
-  min-width: 20em;
 }
 
-.project-card p {
-  text-align: justify;
-  font-size: .8em;
+.project-content p {
+  font-size: .9em;
   width: 100%;
 }
 
-.project-card .links {
-  font-size: 0.85em;
-  margin: 0 .5em;
-  padding: .5em 1.5em;
+.link-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
 }
 
-/* contact section */
-.contact {
-  background-color: #171717;
-  padding: 60px 0 60px 0;
-}
-
-.contact img {
-  width: 90%;
-}
-
-.contact form input,
-.contact form textarea {
-  font-size: 18px;
-  font-weight: 500;
-  letter-spacing: 0.8px;
-  color: #f9f9f9;
-  background: #171717;
-  border: 1px solid #B8B8B8;
-  border-radius: 20px;
-  width: 100%;
-  margin: 0 0 8px 0;
-  padding: 18px 26px;
-  transition: 0.3s ease-in-out;
-}
-
-.contact form input:focus,
-.contact form textarea:focus {
-  color: #f9f9f9;
-  background: #171717;
-}
-
-.contact form input::placeholder,
-.contact form textarea::placeholder {
-  color: #f9f9f9;
-  font-size: 16px;
-  font-weight: 400;
-}
-
-.contact form input:focus::placeholder,
-.contact form textarea:focus::placeholder {
-  color: #171717;
-  opacity: 0.8;
-}
-
-.contact form button {
-  font-size: 18px;
-  font-weight: 700;
-  color: #000;
-  background-color: #f9f9f9;
-  padding: 14px 48px;
-  margin-top: 25px;
-  position: relative;
-  border: 1px solid #f9f9f9;
-  border-radius: 20px;
-  transition: 0.3s ease-in-out;
-}
-
-.contact form button span {
-  z-index: 1;
-  position: relative;
-}
-
-.contact form button:hover {
-  color: #f9f9f9;
-}
-
-.contact form button::before {
-  content: "";
-  background: #171717;
-  border-radius: 20px;
-
-  width: 0;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
-  transition: 0.3s ease-in-out;
-}
-
-.contact form button:hover::before {
-  width: 100%;
-}
-
-/* footer section */
+/* Footer */
 .footer {
-  padding: 50px 0 50px 0;
-  background-image: url("./assets/img/footer-bg.png");
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  padding: 50px 0;
+  background: url("./assets/img/footer-bg.png") center/cover no-repeat;
 }
 
+/* Social Icons */
 .social-icon {
   display: inline-block;
 }
 
 .social-icon a {
-  line-height: 1;
-  width: 45px;
-  height: 45px;
-  margin-right: 6px;
-
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  width: 45px;
+  height: 45px;
+  margin-right: 6px;
+  line-height: 1;
   border: 1px solid #f9f9f9;
   border-radius: 50%;
+  position: relative;
 }
 
 .social-icon a::before {
   content: "";
-  background-color: #f9f9f9;
+  position: absolute;
   width: 45px;
   height: 45px;
-  position: absolute;
   border-radius: 50%;
+  background-color: #f9f9f9;
   transform: scale(0);
-  transition: 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
 
 .social-icon a:hover::before {
@@ -462,7 +362,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .social-icon a img {
   width: 40%;
   z-index: 1;
-  transition: 0.3s ease-in-out;
+  transition: filter 0.3s ease-in-out;
 }
 
 .social-icon a:hover img {
