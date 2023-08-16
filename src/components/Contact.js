@@ -3,7 +3,7 @@ import { Container, Row } from "react-bootstrap";
 
 export default function Contact() {
   return (
-    <section className="contact" id="connect">
+    <section className="contact" id="contact">
       <Container>
         <Row className="justify-content-center align-items-center my-5">
           <div className="text-center">
