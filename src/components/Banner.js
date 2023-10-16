@@ -41,8 +41,8 @@ export default function Banner() {
               viewport={{ once: false, amount: 0.7 }}
               className="mb-8 max-w-lg mx-auto lg:mx-0"
             >
-              I'm a tech-loving junior full-stack developer who gets a thrill
-              from building innovative applications.
+              I'm a passionate Full-Stack Developer with a love for technology
+              and a drive to create cutting-edge applications.
             </motion.p>
             {/* links / buttons */}
             <motion.div
