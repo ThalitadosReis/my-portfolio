@@ -13,7 +13,7 @@ export default function Experience() {
     <div className="section" id="experience">
       <div className="container m-auto">
         {/* title */}
-        <div className="flex flex-col items-center text-center mb-10">
+        <div className="flex flex-col items-center text-center mb-2">
           <h3 className="h3">Explore my</h3>
           <h2 className="h2">Experience</h2>
         </div>
@@ -27,7 +27,7 @@ export default function Experience() {
           >
             {/* front-end list */}
             <h3 className="text-accent text-2xl font-bold text-center mb-7">
-              Front-end Development
+              Frontend Development
             </h3>
 
             <div className="grid grid-cols-2 gap-5 justify-items-center ">
@@ -77,7 +77,7 @@ export default function Experience() {
           >
             {/* back-end  list */}
             <h3 className="text-accent text-2xl font-bold text-center mb-7">
-              Back-end Development
+              Backend Development
             </h3>
 
             <div className="grid grid-cols-2 gap-5 justify-items-center">

@@ -13,8 +13,8 @@ export default function About() {
     <section className="section" id="about">
       <div className="container m-auto">
         {/* title */}
-        <div className="flex flex-col items-center text-center mb-10">
-          <h3 className="h3 mb-0">Get To Know More</h3>
+        <div className="flex flex-col items-center text-center mb-2">
+          <h3 className="h3">Get To Know More</h3>
           <h2 className="h2">About Me</h2>
         </div>
         <div className="flex flex-col gap-y-5 lg:flex-row lg:gap-x-10 lg:gap-y-0 h-screen">

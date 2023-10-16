@@ -16,12 +16,12 @@ export default function Project() {
     <div className="section" id="work">
       <div className="container m-auto">
         {/* text */}
-        <div className="flex flex-col items-center text-center mb-10">
-          <h3 className="h3 mb-0">Browse My Recent</h3>
+        <div className="flex flex-col items-center text-center mb-2">
+          <h3 className="h3">Browse My Recent</h3>
           <h2 className="h2">Projects</h2>
           {/* link to github account */}
           <a
-            class="btn btn-sm lg:btn-lg flex items-center max-w-max"
+            class="flex btn btn-sm lg:btn-lg items-center max-w-max"
             rel="noopener noreferrer"
             href="https://github.com/ThalitadosReis"
             target="_blank"
@@ -35,7 +35,7 @@ export default function Project() {
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: false, amount: 0.3 }}
-          className="grid lg:grid-cols-2 gap-10 mb-10 lg:mb-0"
+          className="grid lg:grid-cols-2 gap-10 my-10 lg:mb-0"
         >
           {/* image */}
           <div className="group relative overflow-hidden border-2 border-black/30 rounded-3xl">

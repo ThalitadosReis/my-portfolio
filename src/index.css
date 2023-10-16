@@ -38,7 +38,7 @@
     @apply font-extrabold text-[48px] mb-6 tracking-[10%] ;
   }
   .h3 {
-    @apply text-[16px] text-accent;
+    @apply text-[16px] mb-3 text-accent;
   }
   .btn, .btn-secondary {
     @apply rounded-full text-white font-medium;
