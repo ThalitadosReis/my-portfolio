@@ -24,7 +24,7 @@ export default function About() {
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: false, amount: 0.3 }}
-            className="flex-1 bg-about bg-cover bg-center bg-no-repeat h-full w-full lg:max-w-[500px] lg:max-h-[500px] sm:max-w-[400px] sm:max-h-[400px] rounded-3xl mx-auto grayscale"
+            className="flex-1 bg-about bg-cover bg-center bg-no-repeat h-full w-full lg:max-w-[500px] lg:max-h-[500px] md:max-w-[400px] md:max-h-[400px] rounded-3xl mx-auto grayscale"
           ></motion.div>
           {/* text */}
           <motion.div
@@ -54,15 +54,11 @@ export default function About() {
               </div>
             </div>
             <p className="text-accent">
-              <p>
-                I'm a Full-Stack Developer from Brazil, currently based in
-                Switzerland. 🌍 Passionate about technology and web development,
-                I thrive on crafting elegant front-end interfaces and robust
-                back-end systems. When I'm not coding, I'm exploring the
-                picturesque landscapes of Switzerland, savoring Swiss chocolate,
-                and embracing Europe's rich culture. Let's connect and code the
-                future together! 🚀
-              </p>
+              I'm a Full-Stack Developer from Brazil, currently based in
+              Switzerland. Passion for web development, design, and exploration.
+              When I'm not coding, I'm exploring the picturesque landscapes of
+              Switzerland, savoring Swiss chocolate, and embracing Europe's rich
+              culture. Let's connect and code the future together! 🚀
             </p>
           </motion.div>
         </div>
