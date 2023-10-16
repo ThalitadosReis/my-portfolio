@@ -11,7 +11,7 @@ import { fadeIn } from "../variants";
 export default function About() {
   return (
     <section className="section" id="about">
-      <div className="container m-auto h-screen">
+      <div className="container m-auto">
         {/* title */}
         <div className="flex flex-col items-center text-center mb-10">
           <h3 className="h3 mb-0">Get To Know More</h3>

@@ -1,5 +1,6 @@
 import React from "react";
 
+// link
 import { Link } from "react-scroll";
 // copy of cv
 import CV from "../assets/cv.pdf";
@@ -33,7 +34,7 @@ export default function Banner() {
             >
               Full-Stack Developer
             </motion.h2>
-            <motion.div
+            <motion.p
               variants={fadeIn("up", 0.5)}
               initial="hidden"
               whileInView={"show"}
@@ -42,7 +43,8 @@ export default function Banner() {
             >
               I'm a tech-loving junior full-stack developer who gets a thrill
               from building innovative applications.
-            </motion.div>
+            </motion.p>
+            {/* links / buttons */}
             <motion.div
               variants={fadeIn("up", 0.3)}
               initial="hidden"

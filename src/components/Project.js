@@ -13,8 +13,8 @@ import { fadeIn } from "../variants";
 
 export default function Project() {
   return (
-    <div className="section " id="work">
-      <div className="container m-auto h-screen">
+    <div className="section" id="work">
+      <div className="container m-auto">
         {/* text */}
         <div className="flex flex-col items-center text-center mb-10">
           <h3 className="h3 mb-0">Browse My Recent</h3>

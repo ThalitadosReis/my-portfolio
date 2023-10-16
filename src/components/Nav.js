@@ -2,8 +2,7 @@ import React from "react";
 
 // link
 import { Link } from "react-scroll";
-
-// import icons
+// icons
 import { BiHomeAlt, BiUser } from "react-icons/bi";
 import { BsClipboardData, BsBriefcase, BsChatSquare } from "react-icons/bs";
 

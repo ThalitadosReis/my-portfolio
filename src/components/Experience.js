@@ -11,7 +11,7 @@ import { fadeIn } from "../variants";
 export default function Experience() {
   return (
     <div className="section" id="experience">
-      <div className="container m-auto h-screen">
+      <div className="container m-auto">
         {/* title */}
         <div className="flex flex-col items-center text-center mb-10">
           <h3 className="h3">Explore my</h3>
