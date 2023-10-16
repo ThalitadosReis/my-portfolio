@@ -10,13 +10,14 @@ import { fadeIn } from "../variants";
 
 export default function Experience() {
   return (
-    <div className="section " id="experience">
+    <div className="section" id="experience">
       <div className="container m-auto h-screen">
-        <div className="text-center mb-10">
+        {/* title */}
+        <div className="flex flex-col items-center text-center mb-10">
           <h3 className="h3">Explore my</h3>
           <h2 className="h2">Experience</h2>
         </div>
-        <div className="flex flex-col lg:flex-row gap-10">
+        <div className="flex flex-col gap-y-5 lg:flex-row lg:gap-x-10 lg:gap-y-0">
           <motion.div
             variants={fadeIn("right", 0.3)}
             initial="hidden"

@@ -1,5 +1,7 @@
 import React from "react";
 
+import { Link } from "react-scroll";
+// copy of cv
 import CV from "../assets/cv.pdf";
 // motion
 import { motion } from "framer-motion";
@@ -57,7 +59,13 @@ export default function Banner() {
               >
                 Download CV
               </a>
-              <button className="btn btn-sm lg:btn-lg">Contact Info</button>
+              <Link
+                to="contact"
+                smooth={true}
+                className="btn btn-sm lg:btn-lg flex items-center cursor-pointer"
+              >
+                Contact Info
+              </Link>
             </motion.div>
           </div>
           {/* image */}

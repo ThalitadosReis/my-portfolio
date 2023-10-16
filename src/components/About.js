@@ -10,14 +10,14 @@ import { fadeIn } from "../variants";
 
 export default function About() {
   return (
-    <section className="section h-screen" id="about">
-      <div className="container m-auto h-full">
+    <section className="section" id="about">
+      <div className="container m-auto h-screen">
         {/* title */}
-        <div className="text-center my-auto">
-          <h3 className="h3">Get To Know More</h3>
+        <div className="flex flex-col items-center text-center mb-10">
+          <h3 className="h3 mb-0">Get To Know More</h3>
           <h2 className="h2">About Me</h2>
         </div>
-        <div className="flex flex-col items-center gap-y-5 lg:flex-row lg:gap-x-10 lg:gap-y-0 h-full">
+        <div className="flex flex-col gap-y-5 lg:flex-row lg:gap-x-10 lg:gap-y-0 h-screen">
           {/* image */}
           <motion.div
             variants={fadeIn("right", 0.3)}
@@ -32,7 +32,7 @@ export default function About() {
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: false, amount: 0.3 }}
-            className="flex-1 flex flex-col"
+            className="flex-1 flex flex-col lg:my-20"
           >
             {/* boxes */}
             <div className="flex flex-col md:flex-row gap-5 mb-5">
