@@ -54,10 +54,15 @@ export default function About() {
               </div>
             </div>
             <p className="text-accent">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
-              reprehenderit et laborum, rem, dolore eum quod voluptate
-              exercitationem nobis, nihil esse debitis maxime facere minus sint
-              delectus velit in eos quo officiis explicabo deleniti dignissimos.
+              <p>
+                I'm a Full-Stack Developer from Brazil, currently based in
+                Switzerland. 🌍 Passionate about technology and web development,
+                I thrive on crafting elegant front-end interfaces and robust
+                back-end systems. When I'm not coding, I'm exploring the
+                picturesque landscapes of Switzerland, savoring Swiss chocolate,
+                and embracing Europe's rich culture. Let's connect and code the
+                future together! 🚀
+              </p>
             </p>
           </motion.div>
         </div>
