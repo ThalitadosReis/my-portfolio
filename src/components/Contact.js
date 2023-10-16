@@ -10,7 +10,7 @@ import { fadeIn } from "../variants";
 
 export default function Contact() {
   return (
-    <div className="section  h-screen" id="contact">
+    <div className="section h-screen" id="contact">
       <div className="container m-auto">
         {/* text */}
         <motion.div
@@ -22,7 +22,7 @@ export default function Contact() {
         >
           <h3 className="h3 mb-0">Get in touch</h3>
           <h2 className="h2">Contact Me</h2>
-          <div className="flex flex-col items-center justify-center leading-[1] lg:flex-row gap-5 ">
+          <div className="flex flex-col items-center justify-center leading-[1] md:flex-row gap-5 ">
             <div className="flex items-center gap-2">
               <MdEmail className="w-[30px] h-[30px]" />
               <a className="cursor-pointer" href="mailto:dosreistha@gmail.com">
