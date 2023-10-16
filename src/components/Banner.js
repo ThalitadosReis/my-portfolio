@@ -1,45 +1,74 @@
-import { Container, Row, Col } from "react-bootstrap";
-import headerImg from "../assets/img/header-img.png";
+import React from "react";
+
+import CV from "../assets/cv.pdf";
+// motion
+import { motion } from "framer-motion";
+// variant
+import { fadeIn } from "../variants";
 
 export default function Banner() {
   return (
-    <Container className="banner mt-5 p-md-5">
-      <Row className="justify-content-center align-items-center">
-        <Col xs={12} md={5} xl={4}>
-          <Container className="mb-5">
-            <img src={headerImg} alt="Header Img" />
-          </Container>
-        </Col>
-        <Col xs={12} md={7} xl={8}>
-          <Container>
-            <h1>
-              Hi! I'm Thalita, <br />
-              and I build things
-              <span style={{ color: "#83b8ff" }}>.</span>
-            </h1>
-            <p>
+    <section className="section h-screen" id="home">
+      <div className="container m-auto">
+        <div className="flex flex-col gap-y-10 items-center lg:flex-row lg:items-center lg:gap-x-12 lg:gap-y-0">
+          {/* text */}
+          <div className="flex-1 text-center lg:text-left">
+            <motion.h1
+              variants={fadeIn("up", 0.3)}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{ once: false, amount: 0.7 }}
+              className="text-[55px] font-bold leading-[0.8] lg:text-[70px] mb-2"
+            >
+              Hello! I'm Thalita
+            </motion.h1>
+            <motion.h2
+              variants={fadeIn("up", 0.4)}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{ once: false, amount: 0.7 }}
+              className="mb-6 text-[36px] lg:text-[-60px] font-semibold uppercase leading-[1]"
+            >
+              Full-Stack Developer
+            </motion.h2>
+            <motion.div
+              variants={fadeIn("up", 0.5)}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{ once: false, amount: 0.7 }}
+              className="mb-8 max-w-lg mx-auto lg:mx-0"
+            >
               I'm a tech-loving junior full-stack developer who gets a thrill
-              from building innovative applications. With experience in both
-              front-end and back-end development, I can bring a unique
-              perspective to any project.
-            </p>
-            <ul className="buttons">
-              <li>
-                <a href="https://domain.ext/path">
-                  <span>Recent projects</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                  >
-                    <path d="M13 17.586V4h-2v13.586l-6.293-6.293-1.414 1.414L12 21.414l8.707-8.707-1.414-1.414L13 17.586z" />
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </Container>
-        </Col>
-      </Row>
-    </Container>
+              from building innovative applications.
+            </motion.div>
+            <motion.div
+              variants={fadeIn("up", 0.3)}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{ once: false, amount: 0.7 }}
+              className="flex max-w-max gap-x-6 items-center mb-12 mx-auto lg:mx-0"
+            >
+              <a
+                class="btn-secondary btn-sm lg:btn-lg flex items-center"
+                href={CV}
+                download="Thalita-dos-Reis-CV"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Download CV
+              </a>
+              <button className="btn btn-sm lg:btn-lg">Contact Info</button>
+            </motion.div>
+          </div>
+          {/* image */}
+          <motion.div
+            variants={fadeIn("down", 0.5)}
+            initial="hidden"
+            whileInView={"show"}
+            className="flex-1 flex max-w-sm bg-about bg-cover bg-center bg-no-repeat rounded-full h-96 grayscale"
+          ></motion.div>
+        </div>
+      </div>
+    </section>
   );
 }

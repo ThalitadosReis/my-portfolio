@@ -1,17 +1,22 @@
-import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-import Banner from "./components/Banner";
-import Projects from "./components/Projects";
-// import Contact from "./components/Contact";
+import React from "react";
 
-function App() {
+// components
+import Banner from "./components/Banner";
+import Nav from "./components/Nav";
+import About from "./components/About";
+import Experience from "./components/Experience";
+import Project from "./components/Project";
+import Contact from "./components/Contact";
+
+export default function App() {
   return (
-    <div className="App">
+    <div className="bg-zinc-50">
       <Banner />
-      <Projects />
-      {/* <Contact /> */}
+      <Nav />
+      <About />
+      <Experience />
+      <Project />
+      <Contact />
     </div>
   );
 }
-
-export default App;
