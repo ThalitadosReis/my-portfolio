@@ -40,7 +40,7 @@ export default function About() {
                 <PiMedalFill className="mx-auto w-[30px] h-[30px] mb-3" />
                 <h2 className="font-bold text-xl">Experience</h2>
                 <p className="text-accent">
-                  2+ years <br />
+                  1+ years <br />
                   Full-Stack Development
                 </p>
               </div>
@@ -58,7 +58,7 @@ export default function About() {
               Switzerland. Passion for web development, design, and exploration.
               When I'm not coding, I'm exploring the picturesque landscapes of
               Switzerland, and embracing Europe's rich culture. Let's connect
-              and code the future together! 🚀
+              and code the future together!
             </p>
           </motion.div>
         </div>

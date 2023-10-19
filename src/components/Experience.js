@@ -66,6 +66,20 @@ export default function Experience() {
                   <span className="text-accent">Intermediate</span>
                 </div>
               </li>
+              <li className="flex gap-2 items-start">
+                <IoIosCheckmarkCircle className="w-[30px] h-[30px]" />
+                <div>
+                  <b>Bootstrap</b> <br />
+                  <span className="text-accent">Intermediate</span>
+                </div>
+              </li>
+              <li className="flex gap-2 items-start">
+                <IoIosCheckmarkCircle className="w-[30px] h-[30px]" />
+                <div>
+                  <b>Tailwind</b> <br />
+                  <span className="text-accent">Intermediate</span>
+                </div>
+              </li>
             </div>
           </motion.div>
           <motion.div
