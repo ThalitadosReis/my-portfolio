@@ -13,18 +13,18 @@ export default function About() {
     <section className="section" id="about">
       <div className="container m-auto">
         {/* title */}
-        <div className="flex flex-col items-center text-center mb-2">
+        <div className="flex flex-col items-center text-center lg:mb-2">
           <h3 className="h3">Get To Know More</h3>
           <h2 className="h2">About Me</h2>
         </div>
-        <div className="flex flex-col gap-y-5 lg:flex-row lg:gap-x-10 lg:gap-y-0 h-screen">
+        <div className="flex flex-col gap-y-5 lg:flex-row lg:gap-x-10">
           {/* image */}
           <motion.div
             variants={fadeIn("right", 0.3)}
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: false, amount: 0.3 }}
-            className="flex-1 bg-about bg-cover bg-center bg-no-repeat h-fit w-full lg:min-w-[500px] lg:min-h-[500px] md:max-w-[400px] md:max-h-[400px] rounded-3xl mx-auto grayscale"
+            className="flex-1 bg-about bg-cover bg-center bg-no-repeat max-h-[350px] max-w-[350px] lg:min-w-[450px] lg:min-h-[450px] md:min-h-[275px] md:min-w-[275px] mx-auto rounded-3xl grayscale"
           ></motion.div>
           {/* text */}
           <motion.div
@@ -32,11 +32,11 @@ export default function About() {
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: false, amount: 0.3 }}
-            className="flex-1 flex flex-col lg:my-20"
+            className="flex-1 flex flex-col lg:my-auto"
           >
             {/* boxes */}
-            <div className="flex flex-col md:flex-row gap-5 mb-5">
-              <div className="flex-1 items-center justify-center border-2 border-black/30 rounded-3xl p-5 text-center">
+            <div className="flex flex-col justify-between md:flex-row gap-5 mb-5">
+              <div className="flex-1 items-center border-2 border-black/30 rounded-3xl p-5 text-center">
                 <PiMedalFill className="mx-auto w-[30px] h-[30px] mb-3" />
                 <h2 className="font-bold text-xl">Experience</h2>
                 <p className="text-accent">
@@ -53,12 +53,20 @@ export default function About() {
                 </p>
               </div>
             </div>
-            <p className="text-accent">
-              I'm a Full-Stack Developer from Brazil, currently based in
-              Switzerland. Passion for web development, design, and exploration.
-              When I'm not coding, I'm exploring the picturesque landscapes of
-              Switzerland, and embracing Europe's rich culture. Let's connect
-              and code the future together!
+            <p className="text-accent text-[15px] leading-snug">
+              I'm a junior Full-Stack Developer originally from Brazil but
+              currently based in the beautiful landscapes of Switzerland. My
+              background is anything but typical, extending beyond the world of
+              coding. My passion lies in web development and design, and I have
+              an endless curiosity for exploration. <br /> <br />
+              My journey has taken me through various roles in hospitality,
+              management, and accounting across places like Barcelona, New
+              Zealand, and beyond. Now, I'm in the process of transitioning into
+              the world of web development. I'm excited to combine the creative
+              perspectives I've gained from my travels with the technical skills
+              I've developed, all in the pursuit of crafting exceptional online
+              experiences. <br /> <br /> Let's connect and code the future
+              together!
             </p>
           </motion.div>
         </div>
