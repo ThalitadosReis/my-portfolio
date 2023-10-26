@@ -11,7 +11,7 @@ import { fadeIn } from "../variants";
 export default function Banner() {
   return (
     <section className="section" id="home">
-      <div className="container mx-auto">
+      <div className="container m-auto lg:my-0">
         <div className="flex flex-col-reverse items-center gap-y-10 lg:flex-row lg:items-center lg:gap-y-0 h-screen">
           {/* text */}
           <div className="flex-1 text-center lg:text-left">
@@ -73,7 +73,7 @@ export default function Banner() {
             variants={fadeIn("down", 0.5)}
             initial="hidden"
             whileInView={"show"}
-            className="flex-1 bg-about bg-cover bg-center bg-no-repeat h-full w-full max-w-[300px] max-h-[300px] lg:items-center lg:min-w-[475px] lg:min-h-[475px] mx-auto rounded-full grayscale"
+            className="flex-1 bg-about bg-cover bg-center bg-no-repeat h-full w-full max-w-[300px] max-h-[300px] lg:items-center lg:min-w-[450px] lg:min-h-[450px] mx-auto rounded-full grayscale"
           ></motion.div>
         </div>
       </div>
