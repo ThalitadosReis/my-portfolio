@@ -73,7 +73,7 @@ export default function Banner() {
             variants={fadeIn("down", 0.5)}
             initial="hidden"
             whileInView={"show"}
-            className="flex-1 bg-about bg-cover bg-center bg-no-repeat h-full w-full max-w-[300px] max-h-[300px] lg:items-center lg:min-w-[450px] lg:min-h-[450px] mx-auto rounded-full grayscale"
+            className="flex-1 bg-banner bg-cover bg-center bg-no-repeat h-full w-full max-w-[300px] max-h-[300px] lg:items-center lg:min-w-[450px] lg:min-h-[450px] mx-auto rounded-full grayscale"
           ></motion.div>
         </div>
       </div>

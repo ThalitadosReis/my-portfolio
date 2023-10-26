@@ -24,7 +24,7 @@ export default function About() {
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: false, amount: 0.3 }}
-            className="flex-1 bg-about bg-cover bg-center bg-no-repeat max-h-[350px] max-w-[350px] lg:min-w-[450px] lg:min-h-[450px] md:min-h-[275px] md:min-w-[275px] mx-auto rounded-3xl grayscale"
+            className="flex-1 bg-about bg-cover bg-top bg-no-repeat max-h-[350px] max-w-[350px] lg:min-w-[450px] lg:min-h-[450px] md:min-h-[275px] md:min-w-[275px] mx-auto rounded-3xl grayscale"
           ></motion.div>
           {/* text */}
           <motion.div
