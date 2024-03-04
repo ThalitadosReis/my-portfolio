@@ -1,14 +1,60 @@
-import React from "react";
-
-// icons
-import { PiMedalFill } from "react-icons/pi";
-import { HiUserGroup } from "react-icons/hi";
+import React, { useTransition, useState } from "react";
 // motion
 import { motion } from "framer-motion";
 // variant
 import { fadeIn } from "../variants";
+import TabButton from "./TabButton";
+
+const TAB_DATA = [
+  {
+    title: "Skills",
+    id: "skills",
+    content: (
+      <ul className="list-disc container grid grid-cols-2">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>React</li>
+          <li>JavaScript</li>
+          <li>Tailwind</li>
+          <li>Bootstrap</li>
+          <li>Node.js</li>
+          <li>Express</li>
+          <li>MongoDB</li>
+      </ul>
+    ),
+  },
+  {
+    title: "Education",
+    id: "education",
+    content: (
+      <ul className="list-disc pl-2">
+        <li>Full-Stack Web Development Bootcamp</li>
+        <li>Bachelor in Business Information Systems</li>
+      </ul>
+    ),
+  },
+  {
+    title: "Certifications",
+    id: "certifications",
+    content: (
+      <ul className="list-disc pl-2">
+        <li>Agile Development Practices</li>
+        <li>TypeScript</li>
+      </ul>
+    ),
+  },
+];
 
 export default function About() {
+  const [tab, setTab] = useState("skills");
+  const [isPending, startTransition] = useTransition();
+
+  const handleTabChange = (id) => {
+    startTransition(() => {
+      setTab(id);
+    });
+  };
+
   return (
     <section className="section" id="about">
       <div className="container m-auto">
@@ -34,40 +80,40 @@ export default function About() {
             viewport={{ once: false, amount: 0.3 }}
             className="flex-1 flex flex-col lg:my-auto"
           >
-            {/* boxes */}
-            <div className="flex flex-col justify-between md:flex-row gap-5 mb-5">
-              <div className="flex-1 items-center border-2 border-black/30 rounded-3xl p-5 text-center">
-                <PiMedalFill className="mx-auto w-[30px] h-[30px] mb-3" />
-                <h2 className="font-bold text-xl">Experience</h2>
-                <p className="text-accent">
-                  1+ years <br />
-                  Full-Stack Development
-                </p>
+            <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
+              <p className="text-base lg:text-lg">
+                I am a full stack web developer with a passion for creating
+                interactive and responsive web applications. I have experience
+                working with JavaScript, React, Node.js, Express,
+                MongoDB, HTML, CSS, and Git. I am a quick learner
+                and I am always looking to expand my knowledge and skill set. I
+                am a team player and I am excited to work with others to create
+                amazing applications.
+              </p>
+              <div className="flex flex-row justify-start mt-8">
+                <TabButton
+                  selectTab={() => handleTabChange("skills")}
+                  active={tab === "skills"}
+                >
+                  Skills
+                </TabButton>
+                <TabButton
+                  selectTab={() => handleTabChange("education")}
+                  active={tab === "education"}
+                >
+                  Education
+                </TabButton>
+                <TabButton
+                  selectTab={() => handleTabChange("certifications")}
+                  active={tab === "certifications"}
+                >
+                  Certifications
+                </TabButton>
               </div>
-              <div className="flex-1 items-center justify-center border-2  border-black/30 rounded-3xl p-4 text-center">
-                <HiUserGroup className="mx-auto w-[30px] h-[30px] mb-3" />
-                <h2 className="font-bold text-xl">Education</h2>
-                <p className="text-accent">
-                  Full-Stack Web Development <br />
-                  Ironhack
-                </p>
+              <div className="mt-8">
+                {TAB_DATA.find((t) => t.id === tab).content}
               </div>
             </div>
-            <p className="text-accent text-[15px] leading-snug">
-              I'm a junior Full-Stack Developer originally from Brazil but
-              currently based in the beautiful landscapes of Switzerland. My
-              background is anything but typical, extending beyond the world of
-              coding. My passion lies in web development and design, and I have
-              an endless curiosity for exploration. <br /> <br />
-              My journey has taken me through various roles in hospitality,
-              management, and accounting across places like Barcelona, New
-              Zealand, and beyond. Now, I'm in the process of transitioning into
-              the world of web development. I'm excited to combine the creative
-              perspectives I've gained from my travels with the technical skills
-              I've developed, all in the pursuit of crafting exceptional online
-              experiences. <br /> <br /> Let's connect and code the future
-              together!
-            </p>
           </motion.div>
         </div>
       </div>
