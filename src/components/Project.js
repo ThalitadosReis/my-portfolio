@@ -1,33 +1,59 @@
-import React from "react";
+import React, { useRef } from "react";
+import { fadeIn } from "../variants";
+import { motion, useInView } from "framer-motion";
+import ProjectCard from "./ProjectCard";
 
 // images
 import Img1 from "../assets/portfolio-img1.png";
 import Img2 from "../assets/portfolio-img2.png";
 import Img3 from "../assets/portfolio-img3.png";
-// icon
-import { HiArrowRight } from "react-icons/hi";
-// motion
-import { motion } from "framer-motion";
-// variant
-import { fadeIn } from "../variants";
+
+const projectsData = [
+  {
+    id: 1,
+    title: "Moonlight",
+    description: "Project 1 description",
+    image: Img1,
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/orgs/JoTa-Events/repositories",
+    previewUrl: "https://moonlight-events.netlify.app/",
+  },
+  {
+    id: 2,
+    title: "Outbackers",
+    description: "Project 2 description",
+    image: Img2,
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/ironhack-outbackers-project/outbackers",
+    previewUrl: "https://outbackers.adaptable.app/",
+  },
+  {
+    id: 3,
+    title: "Yoshi Run",
+    description: "Project 3 description",
+    image: Img3,
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/ThalitadosReis/yoshi-run",
+    previewUrl: "https://thalitadosreis.github.io/yoshi-run/",
+  },
+];
 
 export default function Project() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  const cardVariants = {
+    initial: { y: 50, opacity: 0 },
+    animate: { y: 0, opacity: 1 },
+  };
+
   return (
-    <div className="section" id="work">
+    <section className="section" id="project">
       <div className="container m-auto">
-        {/* text */}
-        <div className="flex flex-col items-center text-center mb-2">
+        {/* title */}
+        <div className="flex flex-col items-center text-center mb-5">
           <h3 className="h3">Browse My Recent</h3>
           <h2 className="h2">Projects</h2>
-          {/* link to github account */}
-          <a
-            class="flex btn btn-sm lg:btn-lg items-center max-w-max"
-            rel="noopener noreferrer"
-            href="https://github.com/ThalitadosReis"
-            target="_blank"
-          >
-            View all projects
-          </a>
         </div>
 
         <motion.div
@@ -35,88 +61,29 @@ export default function Project() {
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: false, amount: 0.3 }}
-          className="grid lg:grid-cols-2 gap-10 my-10 lg:mb-0"
         >
-          {/* image */}
-          <div className="group relative overflow-hidden border-2 border-black/30 rounded-3xl">
-            {/* overlay */}
-            <div className="group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300"></div>
-            {/* img */}
-            <img
-              className="group-hover:scale-125 transition-all duration-500"
-              src={Img1}
-              alt=""
-            />
-            {/* link */}
-            <div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50">
-              <a
-                class="text-white/60 text-bold flex items-center gap-2 cursor-pointer"
-                rel="noopener noreferrer"
-                href="https://moonlight-events.netlify.app/"
-                target="_blank"
+          <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
+            {projectsData.map((project, index) => (
+              <motion.li
+                key={index}
+                variants={cardVariants}
+                initial="initial"
+                animate={isInView ? "animate" : "initial"}
+                transition={{ duration: 0.3, delay: index * 0.4 }}
               >
-                Live Demo <HiArrowRight />
-              </a>
-            </div>
-            {/* title */}
-            <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50">
-              <span className="text-3xl text-white ">Moonlight</span>
-            </div>
-          </div>
-          {/* image */}
-          <div className="group relative overflow-hidden border-2 border-black/30 rounded-3xl">
-            {/* overlay */}
-            <div className="group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300"></div>
-            {/* img */}
-            <img
-              className="group-hover:scale-125 transition-all duration-500"
-              src={Img2}
-              alt=""
-            />
-            {/* pre-title */}
-            <div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50">
-              <a
-                class="text-white/60 text-bold flex items-center gap-2 cursor-pointer"
-                rel="noopener noreferrer"
-                href="https://outbackers.adaptable.app/"
-                target="_blank"
-              >
-                Live Demo <HiArrowRight />
-              </a>
-            </div>
-            {/* title */}
-            <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50">
-              <span className="text-3xl text-white ">Outbackers</span>
-            </div>
-          </div>
-          {/* image */}
-          <div className="group relative overflow-hidden border-2 border-black/30 rounded-3xl">
-            {/* overlay */}
-            <div className="group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300"></div>
-            {/* img */}
-            <img
-              className="group-hover:scale-125 transition-all duration-500"
-              src={Img3}
-              alt=""
-            />
-            {/* pre-title */}
-            <div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50">
-              <a
-                class="text-white/60 text-bold flex items-center gap-2 cursor-pointer"
-                rel="noopener noreferrer"
-                href="https://thalitadosreis.github.io/yoshi-run/"
-                target="_blank"
-              >
-                Live Demo <HiArrowRight />
-              </a>
-            </div>
-            {/* title */}
-            <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50">
-              <span className="text-3xl text-white ">Yoshi Run</span>
-            </div>
-          </div>
+                <ProjectCard
+                  key={project.id}
+                  title={project.title}
+                  description={project.description}
+                  imgUrl={project.image}
+                  gitUrl={project.gitUrl}
+                  previewUrl={project.previewUrl}
+                />
+              </motion.li>
+            ))}
+          </ul>
         </motion.div>
       </div>
-    </div>
+    </section>
   );
 }

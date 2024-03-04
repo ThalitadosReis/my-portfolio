@@ -6,12 +6,12 @@ const variants = {
   active: { width: "calc(100% - 0.75rem)" },
 };
 
-const TabButton = ({ active, selectTab, children }) => {
-  const buttonClasses = active ? "text-black" : "text-[#ADB7BE]";
+export default function TabButton ({ active, selectTab, children }) {
+  const buttonClasses = active ? "text-black" : "text-gray-400";
 
   return (
     <button onClick={selectTab}>
-      <p className={`mr-3 font-semibold hover:text-gray-600 ${buttonClasses}`}>
+      <p className={`mr-3 font-semibold hover:text-black ${buttonClasses}`}>
         {children}
       </p>
       <motion.div
@@ -22,5 +22,3 @@ const TabButton = ({ active, selectTab, children }) => {
     </button>
   );
 };
-
-export default TabButton;
