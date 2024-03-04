@@ -12,7 +12,7 @@ const projectsData = [
   {
     id: 1,
     title: "Moonlight",
-    description: "Project 1 description",
+    description: "A MERN web application for event discovery and attendance, featuring a real-time chat for attendee connectivity",
     image: Img1,
     tag: ["All", "Web"],
     gitUrl: "https://github.com/orgs/JoTa-Events/repositories",
@@ -21,7 +21,7 @@ const projectsData = [
   {
     id: 2,
     title: "Outbackers",
-    description: "Project 2 description",
+    description: "A web platform connecting backpackers with temporary jobs and housing opportunities.",
     image: Img2,
     tag: ["All", "Web"],
     gitUrl: "https://github.com/ironhack-outbackers-project/outbackers",
@@ -30,7 +30,7 @@ const projectsData = [
   {
     id: 3,
     title: "Yoshi Run",
-    description: "Project 3 description",
+    description: "A entertaining web-based game where Yoshi navigates obstacles.",
     image: Img3,
     tag: ["All", "Web"],
     gitUrl: "https://github.com/ThalitadosReis/yoshi-run",
