@@ -3,7 +3,7 @@ import React from "react";
 export default function Banner() {
   return (
     <section
-      className="section bg-[#ecebea] rounded-b-[75px] md:rounded-b-[100px] lg:rounded-b-[200px] overflow-hidden"
+      className="section bg-soft-gray rounded-b-[75px] md:rounded-b-[100px] lg:rounded-b-[200px] overflow-hidden"
       id="home"
     >
       <div className="container mx-auto mb-10">

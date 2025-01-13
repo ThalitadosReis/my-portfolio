@@ -17,7 +17,7 @@ export default function About() {
           </div>
         </div>
 
-        <div className="flex flex-col lg:flex-row items-center lg:items-start">
+        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-10">
           <div className="flex-1 text-center lg:text-left">
             <h1 className="uppercase text-[30px] lg:text-[45px] leading-[1] text-center lg:text-left lg:break-words lg:whitespace-pre-wrap">
               I use my {"\n"}background in {"\n"}

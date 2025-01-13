@@ -18,8 +18,9 @@ module.exports = {
     },
     extend: {
       colors: {
-        primary: "#000",
-        accent: "#555555",
+        "soft-gray": "#f6f5f4",
+        "neutral-light": "#ecebea",
+        "off-white": "#fffffe",
       },
       backgroundImage: {
         banner: "url('./assets/banner.png')",

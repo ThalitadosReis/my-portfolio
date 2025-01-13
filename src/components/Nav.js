@@ -21,33 +21,31 @@ export default function Nav() {
   };
 
   return (
-    <nav className="w-full pt-5 bg-[#ecebea]">
+    <nav className="w-full pt-5 bg-soft-gray">
       <div className="container flex justify-between items-center mx-auto">
         <div className="flex items-center gap-3 text-xs">
           <div className="flex items-center">
             {/* Large Screen: Show Email and Copy Button */}
-            <div className="hidden lg:flex items-center border rounded-full border-black/10 p-0.5">
+            <div className="hidden lg:flex items-center rounded-full border-2 border-neutral-light p-0.5">
               <span className="px-3">{email}</span>
               <button
                 onClick={copyToClipboard}
                 className={`px-4 py-2 rounded-full focus:outline-none transition-all 
-                ${copied ? "bg-black text-white" : "bg-white"}`}
+                ${copied ? "bg-neutral-light text-black" : "bg-off-white"}`}
               >
-                {copied ? "Copied" : "Copy"}
+                {copied ? "Copied!" : "Copy"}
               </button>
             </div>
             {/* Smaller Screen: Show Single Button */}
             <button
               onClick={() => (window.location.href = `mailto:${email}`)}
-              className="lg:hidden px-6 py-2 rounded-full bg-black text-white"
+              className="lg:hidden px-6 py-2 rounded-full border-2 border-neutral-light bg-black text-white"
             >
               Email
             </button>
           </div>
-
-          {/* CV */}
           <a
-            className="px-6 py-2 rounded-full bg-white"
+            className="px-6 py-2 rounded-full border-2 border-neutral-light bg-off-white"
             href={CV}
             target="_blank"
             rel="noopener noreferrer"
@@ -82,7 +80,7 @@ export default function Nav() {
               href="https://www.linkedin.com/in/thalitadosreis/"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-full bg-white"
+              className="p-2 rounded-full bg-off-white"
             >
               <FaLinkedin size={20} />
             </a>
@@ -90,7 +88,7 @@ export default function Nav() {
               href="https://github.com/ThalitadosReis"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-full bg-white"
+              className="p-2 rounded-full bg-off-white"
             >
               <FaGithub size={20} />
             </a>
