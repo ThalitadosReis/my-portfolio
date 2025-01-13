@@ -10,8 +10,8 @@ import Contact from "./components/Contact";
 export default function App() {
   return (
     <div className="bg-zinc-50">
-      <Banner />
       <Nav />
+      <Banner />
       <About />
       <Project />
       <Contact />

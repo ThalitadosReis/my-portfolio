@@ -8,11 +8,12 @@ import CV from "../assets/cv.pdf";
 import { motion } from "framer-motion";
 // variant
 import { fadeIn } from "../variants";
+
 export default function Banner() {
   return (
-    <section className="section" id="home">
+    <section className="section bg-[#ecebea] rounded-b-[200px]" id="home">
       <div className="container m-auto lg:my-0">
-        <div className="flex flex-col-reverse items-center gap-y-10 lg:flex-row lg:items-center lg:gap-y-0 h-screen">
+        <div className="flex flex-col-reverse items-center gap-y-10 lg:flex-row lg:items-center lg:gap-y-0">
           {/* text */}
           <div className="flex-1 text-center lg:text-left">
             <motion.h1
