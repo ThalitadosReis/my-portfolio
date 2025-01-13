@@ -2,9 +2,8 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     fontFamily: {
-      kanit:['Kanit', 'sans-serif'],
-      newyork: ['NewYork', 'sans-serif'],
-
+      kanit: ["Kanit", "sans-serif"],
+      newyork: ["NewYork", "sans-serif"],
     },
     container: {
       padding: {
@@ -24,7 +23,6 @@ module.exports = {
       },
       backgroundImage: {
         banner: "url('./assets/banner.png')",
-        about: "url('./assets/about.jpeg')",
       },
     },
   },

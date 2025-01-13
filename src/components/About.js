@@ -4,27 +4,37 @@ export default function About() {
   return (
     <section className="section" id="about">
       <div className="container mx-auto">
-        {/* title */}
-        <div className="flex flex-col items-center text-center lg:mb-2">
-          <h3 className="h3">Get To Know More</h3>
-          <h2 className="h2">About Me</h2>
-        </div>
-        <div className="flex flex-col gap-y-5 lg:flex-row lg:gap-x-10">
-          {/* image */}
-          <div className="flex-1 bg-about bg-cover bg-top bg-no-repeat max-h-[350px] max-w-[350px] lg:min-w-[450px] lg:min-h-[450px] md:min-h-[275px] md:min-w-[275px] mx-auto rounded-3xl grayscale"></div>
-          {/* text */}
-          <div className="flex-1 flex flex-col lg:my-auto">
-            <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-              <p className="text-base lg:text-lg">
-                I am a full stack web developer with a passion for creating
-                interactive and responsive web applications. I have experience
-                working with JavaScript, React, Node.js, Express,
-                MongoDB, HTML, CSS, and Git. I am a quick learner
-                and I am always looking to expand my knowledge and skill set. I
-                am a team player and I am excited to work with others to create
-                amazing applications.
-              </p>
+        {/* Header */}
+        <div className="flex flex-col items-end my-10">
+          <span className="absolute text-black-/50 text-xs uppercase">
+            About me
+          </span>
+          <div className="flex items-center w-full gap-3">
+            <div className="relative w-10 h-10 transform rotate-45 border border-black/10 flex items-center justify-center rounded-lg">
+              <span className="transform -rotate-45 text-sm">01</span>
             </div>
+            <div className="flex-grow border-t border-black/10"></div>
+          </div>
+        </div>
+
+        <div className="flex flex-col lg:flex-row items-center lg:items-start">
+          <div className="flex-1 text-center lg:text-left">
+            <h1 className="uppercase text-[30px] lg:text-[45px] leading-[1] text-center lg:text-left lg:break-words lg:whitespace-pre-wrap">
+              I use my {"\n"}background in {"\n"}
+              <span className="font-newyork font-normal">Hospitality </span>to build
+              <span className="font-newyork font-normal"> customer-focused </span>
+              solutions.
+            </h1>
+          </div>
+          <div className="flex-1 text-base text-justify">
+            <p>
+              I am a full-stack web developer with a passion for creating
+              interactive and responsive web applications. I have experience
+              working with JavaScript, React, Node.js, Express, MongoDB, HTML,
+              CSS, and Git. I am a quick learner and always looking to expand my
+              knowledge and skill set. I thrive in collaborative environments
+              and am excited to work with others to create amazing applications.
+            </p>
           </div>
         </div>
       </div>

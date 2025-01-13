@@ -7,18 +7,14 @@ export default function Banner() {
       id="home"
     >
       <div className="container mx-auto mb-10">
-      <h1 className="text-[35px] md:text-[60px] lg:text-[100px] leading-[0.8] mb-10 font-newyork">
+        <h1 className="text-[35px] md:text-[60px] lg:text-[100px] leading-[0.8] mb-10 font-newyork">
           Full-Stack Developer
         </h1>
-        <p className="text-sm font-bold text-black/50 mb-10">
-          I'm a Full-Stack Developer based in Zürich
-          <br />
-          I specialize in React and JavaScript
+        <p className="text-sm font-bold text-black/50 mb-10 break-words whitespace-pre-wrap">
+          I'm a Full-Stack Developer based in Zürich.{"\n"}
+          I specialize in React and JavaScript.
         </p>
-
-        <div
-          className="bg-banner bg-cover bg-center bg-no-repeat w-full h-[300px] lg:h-[450px] max-w-[250px] lg:max-w-[450px] mx-auto grayscale"
-        ></div>
+        <div className="bg-banner bg-cover bg-center bg-no-repeat w-full h-[300px] lg:h-[450px] max-w-[250px] lg:max-w-[450px] mx-auto grayscale"></div>
       </div>
     </section>
   );

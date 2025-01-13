@@ -2,34 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.btn {
-  background: #353535;
-}
-
-.btn-secondary {
-  color: #000;
-  border: 1px solid;
-}
-
-.btn:hover {
-  background: #000;
-}
-
-.btn-secondary:hover {
-  background-color: #353535;
-  color: white;
-}
-
-.active {
-  background: #000;
-}
-
-.active {
-  color: #fff;
-  padding: 1rem;
-  border-radius: 100%;
-}
-
 @font-face {
   font-family: 'NewYork';
   src: url('/public/fonts/NewYork.otf') format('opentype');
@@ -43,24 +15,9 @@
 
 @layer base {
   body {
-    @apply font-kanit text-lg leading-8 text-black;
-  }
-  .h2 {
-    @apply font-extrabold text-[48px] mb-6 tracking-[10%] ;
-  }
-  .h3 {
-    @apply text-[16px] mb-3 text-accent;
-  }
-  .btn, .btn-secondary {
-    @apply rounded-full text-white font-medium;
-  }
-  .btn-sm {
-    @apply h-[48px] px-6 text-sm;
-  }
-  .btn-lg {
-    @apply h-[56px] px-10 text-base;
+    @apply font-kanit leading-8 text-black;
   }
   .section {
-    @apply py-8 lg:py-24;
+    @apply py-8;
   }
 }

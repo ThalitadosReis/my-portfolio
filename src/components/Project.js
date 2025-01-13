@@ -39,11 +39,17 @@ const projectsData = [
 export default function Project() {
   return (
     <section className="section" id="project">
-      <div className="container m-auto">
-        {/* title */}
-        <div className="flex flex-col items-center text-center mb-5">
-          <h3 className="h3">Browse My Recent</h3>
-          <h2 className="h2">Projects</h2>
+      <div className="container mx-auto">
+      <div className="flex flex-col items-end mb-10">
+          <span className="absolute text-black-/50 text-xs uppercase my-auto">Projects</span>
+          <div className="flex items-center w-full gap-3">
+            <div className="relative w-10 h-10 transform rotate-45 border border-black/10 flex items-center justify-center rounded-lg">
+              <span className="transform -rotate-45 text-sm">
+                02
+              </span>
+            </div>
+            <div className="flex-grow border-t border-black/10"></div>
+          </div>
         </div>
 
         <div>
