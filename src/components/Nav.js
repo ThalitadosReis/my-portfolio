@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+
 // copy of cv
 import CV from "../assets/cv.pdf";
 
@@ -20,20 +22,32 @@ export default function Nav() {
 
   return (
     <nav className="w-full pt-5 bg-[#ecebea]">
-      <div className="container mx-auto flex justify-between">
-        <div className="w-full backdrop-blur-2xl rounded-full flex gap-3 items-center text-xs">
-          <div className="flex items-center gap-3 border rounded-full border-gray-200 p-0.5">
-            <span className="px-3 text-xs">{email}</span>
-            <button
-              onClick={copyToClipboard}
-              className={`px-8 py-4 rounded-full focus:outline-none transition-all 
+      <div className="container flex justify-between items-center mx-auto text-xs">
+        <div className="flex items-center gap-3">
+          <div className="flex items-center">
+            {/* Large Screen: Show Email and Copy Button */}
+            <div className="hidden lg:flex items-center border rounded-full border-black/10 p-0.5">
+              <span className="px-3">{email}</span>
+              <button
+                onClick={copyToClipboard}
+                className={`px-4 py-2 rounded-full focus:outline-none transition-all 
                 ${copied ? "bg-black text-white" : "bg-white"}`}
+              >
+                {copied ? "Copied" : "Copy"}
+              </button>
+            </div>
+            {/* Smaller Screen: Show Single Button */}
+            <button
+              onClick={() => (window.location.href = `mailto:${email}`)}
+              className="lg:hidden px-6 py-2 rounded-full bg-black text-white"
             >
-              {copied ? "Copied" : "Copy"}
+              Email
             </button>
           </div>
+
+          {/* CV */}
           <a
-            className="px-9 py-4 rounded-full focus:outline-none transition-all bg-white"
+            className="px-6 py-2 rounded-full bg-white"
             href={CV}
             target="_blank"
             rel="noopener noreferrer"
@@ -41,22 +55,46 @@ export default function Nav() {
             CV
           </a>
         </div>
-        <div className="flex gap-3 items-center text-sm">
-          <a
-            href="https://www.linkedin.com/in/thalitadosreis/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            LinkedIn
-          </a>
-          /
-          <a
-            href="https://github.com/ThalitadosReis"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            GitHub
-          </a>
+
+        <div className="flex items-center gap-3 text-sm">
+          {/* Large Screen: Show Text-Links */}
+          <div className="hidden lg:flex gap-3">
+            <a
+              href="https://www.linkedin.com/in/thalitadosreis/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </a>
+            /
+            <a
+              href="https://github.com/ThalitadosReis"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+          </div>
+
+          {/* Small Screen: Show Icons */}
+          <div className="flex lg:hidden gap-3">
+            <a
+              href="https://www.linkedin.com/in/thalitadosreis/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-full bg-white"
+            >
+              <FaLinkedin size={20} />
+            </a>
+            <a
+              href="https://github.com/ThalitadosReis"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-full bg-white"
+            >
+              <FaGithub size={20} />
+            </a>
+          </div>
         </div>
       </div>
     </nav>
