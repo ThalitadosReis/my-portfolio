@@ -22,8 +22,8 @@ export default function Nav() {
 
   return (
     <nav className="w-full pt-5 bg-[#ecebea]">
-      <div className="container flex justify-between items-center mx-auto text-xs">
-        <div className="flex items-center gap-3">
+      <div className="container flex justify-between items-center mx-auto">
+        <div className="flex items-center gap-3 text-xs">
           <div className="flex items-center">
             {/* Large Screen: Show Email and Copy Button */}
             <div className="hidden lg:flex items-center border rounded-full border-black/10 p-0.5">

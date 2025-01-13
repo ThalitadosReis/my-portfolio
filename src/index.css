@@ -30,9 +30,20 @@
   border-radius: 100%;
 }
 
+@font-face {
+  font-family: 'NewYork';
+  src: url('/public/fonts/NewYork.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Kanit';
+  src: url('/public/fonts/Kanit-Light.ttf') format('opentype');
+}
+
+
 @layer base {
   body {
-    @apply font-primary text-lg leading-8 text-black;
+    @apply font-kanit text-lg leading-8 text-black;
   }
   .h2 {
     @apply font-extrabold text-[48px] mb-6 tracking-[10%] ;
@@ -50,6 +61,6 @@
     @apply h-[56px] px-10 text-base;
   }
   .section {
-    @apply py-8 lg:py-24 lg:h-screen flex items-center;
+    @apply py-8 lg:py-24;
   }
 }

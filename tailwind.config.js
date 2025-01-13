@@ -2,11 +2,13 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     fontFamily: {
-      primary: "Poppins",
+      kanit:['Kanit', 'sans-serif'],
+      newyork: ['NewYork', 'sans-serif'],
+
     },
     container: {
       padding: {
-        DEFAULT: "15px",
+        DEFAULT: "25px",
       },
     },
     screens: {
