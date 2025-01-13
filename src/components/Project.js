@@ -1,6 +1,4 @@
-import React, { useRef } from "react";
-import { fadeIn } from "../variants";
-import { motion, useInView } from "framer-motion";
+import React from "react";
 import ProjectCard from "./ProjectCard";
 
 // images
@@ -39,14 +37,6 @@ const projectsData = [
 ];
 
 export default function Project() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-
-  const cardVariants = {
-    initial: { y: 50, opacity: 0 },
-    animate: { y: 0, opacity: 1 },
-  };
-
   return (
     <section className="section" id="project">
       <div className="container m-auto">
@@ -56,21 +46,10 @@ export default function Project() {
           <h2 className="h2">Projects</h2>
         </div>
 
-        <motion.div
-          variants={fadeIn("up", 0.3)}
-          initial="hidden"
-          whileInView={"show"}
-          viewport={{ once: false, amount: 0.3 }}
-        >
-          <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
+        <div>
+          <ul className="grid md:grid-cols-3 gap-8 md:gap-12">
             {projectsData.map((project, index) => (
-              <motion.li
-                key={index}
-                variants={cardVariants}
-                initial="initial"
-                animate={isInView ? "animate" : "initial"}
-                transition={{ duration: 0.3, delay: index * 0.4 }}
-              >
+              <li key={index}>
                 <ProjectCard
                   key={project.id}
                   title={project.title}
@@ -79,10 +58,10 @@ export default function Project() {
                   gitUrl={project.gitUrl}
                   previewUrl={project.previewUrl}
                 />
-              </motion.li>
+              </li>
             ))}
           </ul>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

@@ -9,7 +9,7 @@ import Contact from "./components/Contact";
 
 export default function App() {
   return (
-    <div className="bg-zinc-50">
+    <div>
       <Nav />
       <Banner />
       <About />
