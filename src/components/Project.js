@@ -1,5 +1,5 @@
 import React from "react";
-import projectsData from "../projectsData";
+import projectsData from "../data/projectsData";
 import ProjectCard from "./ProjectCard";
 
 export default function Project() {
@@ -20,13 +20,14 @@ export default function Project() {
 
         <div className="flex flex-col lg:flex-row items-center lg:items-start gap-10">
           <div className="flex-1 text-center lg:text-left">
-
+            <h1 className="uppercase text-[30px] lg:text-[45px] leading-[1] text-center lg:text-left lg:break-words lg:whitespace-pre-wrap">
+              What I've <span className="font-newyork">Built</span>
+            </h1>
           </div>
           <ul className="flex-1 text-base text-justify">
             {projectsData.map((project, index) => (
               <li key={index}>
                 <ProjectCard
-                  key={project.id}
                   title={project.title}
                   description={project.description}
                   technologies={project.technologies}
