@@ -30,7 +30,7 @@ export default function Nav() {
               <span className="px-3">{email}</span>
               <button
                 onClick={copyToClipboard}
-                className={`px-4 py-2 rounded-full focus:outline-none transition-all 
+                className={`px-4 py-2 rounded-full focus:outline-none transition-all hover-underline
                 ${copied ? "bg-neutral-light text-black" : "bg-off-white"}`}
               >
                 {copied ? "Copied!" : "Copy"}
@@ -39,13 +39,13 @@ export default function Nav() {
             {/* Smaller Screen: Show Single Button */}
             <button
               onClick={() => (window.location.href = `mailto:${email}`)}
-              className="lg:hidden px-6 py-2 rounded-full border-2 border-neutral-light bg-black text-white"
+              className="lg:hidden px-6 py-2 rounded-full border-2 border-neutral-light bg-black text-white hover-underline"
             >
               Email
             </button>
           </div>
           <a
-            className="px-6 py-2 rounded-full border-2 border-neutral-light bg-off-white"
+            className="px-6 py-2 rounded-full border-2 border-neutral-light bg-off-white hover-underline"
             href={CV}
             target="_blank"
             rel="noopener noreferrer"
@@ -61,6 +61,7 @@ export default function Nav() {
               href="https://www.linkedin.com/in/thalitadosreis/"
               target="_blank"
               rel="noopener noreferrer"
+              className="hover-underline"
             >
               LinkedIn
             </a>
@@ -69,6 +70,7 @@ export default function Nav() {
               href="https://github.com/ThalitadosReis"
               target="_blank"
               rel="noopener noreferrer"
+              className="hover-underline"
             >
               GitHub
             </a>

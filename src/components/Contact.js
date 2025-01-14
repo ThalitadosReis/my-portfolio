@@ -19,7 +19,7 @@ export default function Contact() {
             <div className="flex items-center gap-3">
               <button
                 onClick={() => (window.location.href = `mailto:${email}`)}
-                className="flex items-center gap-2 px-6 py-3 border-2 border-neutral-light rounded-full bg-black text-white"
+                className="flex items-center gap-2 px-6 py-3 border-2 border-neutral-light rounded-full bg-black text-white hover-underline"
               >
                 <FiMail size={15} />
                 Email
@@ -30,7 +30,7 @@ export default function Contact() {
                 onClick={() =>
                   (window.location.href = `https://wa.me/${whatsappPhone}`)
                 }
-                className="flex items-center gap-2 px-6 py-3 border-2 border-neutral-light rounded-full bg-off-white text-text-dark"
+                className="flex items-center gap-2 px-6 py-3 border-2 border-neutral-light rounded-full bg-off-white text-text-dark hover-underline"
               >
                 <FaWhatsapp size={15} />
                 WhatsApp
@@ -38,10 +38,10 @@ export default function Contact() {
             </div>
           </div>
         </div>
-        <div className="my-10 text-sm">
+        <div className="mt-10 text-sm">
           <div className="flex-grow border-t-2 border-neutral-light"></div>
-          <div className="flex justify-between items-center gap-5 px-5">
-            <span>© 2024 All rights reserved.</span>
+          <div className="flex justify-between items-center">
+            <span>© 2024 Thalita dos Reis</span>
             <div className="flex items-center my-5 gap-3 text-sm">
               {/* Large Screen: Show Text-Links */}
               <div className="hidden lg:flex gap-3">
@@ -49,6 +49,7 @@ export default function Contact() {
                   href="https://www.linkedin.com/in/thalitadosreis/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="hover-underline"
                 >
                   LinkedIn
                 </a>
@@ -57,6 +58,7 @@ export default function Contact() {
                   href="https://github.com/ThalitadosReis"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="hover-underline"
                 >
                   GitHub
                 </a>
@@ -68,7 +70,7 @@ export default function Contact() {
                   href="https://www.linkedin.com/in/thalitadosreis/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 rounded-full off-white"
+                  className="p-2 rounded-full bg-white"
                 >
                   <FaLinkedin size={20} />
                 </a>
@@ -76,7 +78,7 @@ export default function Contact() {
                   href="https://github.com/ThalitadosReis"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 rounded-full off-white"
+                  className="p-2 rounded-full bg-white"
                 >
                   <FaGithub size={20} />
                 </a>
