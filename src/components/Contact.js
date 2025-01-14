@@ -50,6 +50,7 @@ export default function Contact() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover-underline"
+                  aria-label="LinkedIn profile"
                 >
                   LinkedIn
                 </a>
@@ -59,6 +60,7 @@ export default function Contact() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover-underline"
+                  aria-label="GitHub profile"
                 >
                   GitHub
                 </a>
@@ -67,20 +69,22 @@ export default function Contact() {
               {/* Small Screen: Show Icons */}
               <div className="flex lg:hidden gap-3">
                 <a
-                  href="https://www.linkedin.com/in/thalitadosreis/"
+                  href="https://www.linkedin.com/in/thalidadosreis/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 rounded-full bg-white"
+                  className="p-2 rounded-full bg-off-white"
+                  aria-label="LinkedIn profile"
                 >
-                  <FaLinkedin size={20} />
+                  <FaLinkedin size={20} alt="LinkedIn icon" />
                 </a>
                 <a
                   href="https://github.com/ThalitadosReis"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 rounded-full bg-white"
+                  className="p-2 rounded-full bg-off-white"
+                  aria-label="GitHub profile"
                 >
-                  <FaGithub size={20} />
+                  <FaGithub size={20} alt="GitHub icon" />
                 </a>
               </div>
             </div>

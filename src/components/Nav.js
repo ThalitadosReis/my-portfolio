@@ -40,6 +40,7 @@ export default function Nav() {
             <button
               onClick={() => (window.location.href = `mailto:${email}`)}
               className="lg:hidden px-6 py-2 rounded-full border-2 border-neutral-light bg-black text-white hover-underline"
+              aria-label="Send email"
             >
               Email
             </button>
@@ -49,6 +50,7 @@ export default function Nav() {
             href={CV}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="View CV"
           >
             CV
           </a>
@@ -62,6 +64,7 @@ export default function Nav() {
               target="_blank"
               rel="noopener noreferrer"
               className="hover-underline"
+              aria-label="LinkedIn profile"
             >
               LinkedIn
             </a>
@@ -71,6 +74,7 @@ export default function Nav() {
               target="_blank"
               rel="noopener noreferrer"
               className="hover-underline"
+              aria-label="GitHub profile"
             >
               GitHub
             </a>
@@ -79,20 +83,22 @@ export default function Nav() {
           {/* Small Screen: Show Icons */}
           <div className="flex lg:hidden gap-3">
             <a
-              href="https://www.linkedin.com/in/thalitadosreis/"
+              href="https://www.linkedin.com/in/thalidadosreis/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-full bg-off-white"
+              aria-label="LinkedIn profile"
             >
-              <FaLinkedin size={20} />
+              <FaLinkedin size={20} alt="LinkedIn icon" />
             </a>
             <a
               href="https://github.com/ThalitadosReis"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-full bg-off-white"
+              aria-label="GitHub profile"
             >
-              <FaGithub size={20} />
+              <FaGithub size={20} alt="GitHub icon" />
             </a>
           </div>
         </div>

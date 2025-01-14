@@ -11,15 +11,14 @@ export default function ProjectCard({
     <div className="mb-10">
       <div className="flex flex-col gap-3 leading-1">
         <div className="flex justify-between">
-          <h1 className="uppercase text-[20px] lg:text-[35px] font-bold">
-            {title}
-          </h1>
+          <h1 className="uppercase text-[20px] lg:text-[35px] font-bold">{title}</h1>
           <div className="flex items-center gap-3 text-sm">
             <a
               href={gitUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="hover-underline"
+              aria-label={`GitHub repository for ${title}`}
             >
               GitHub
             </a>
@@ -29,6 +28,7 @@ export default function ProjectCard({
               target="_blank"
               rel="noopener noreferrer"
               className="hover-underline"
+              aria-label={`Preview the project: ${title}`}
             >
               Preview
             </a>
@@ -39,6 +39,7 @@ export default function ProjectCard({
             <li
               key={index}
               className="px-2 py-1 bg-soft-gray rounded-md shadow-sm"
+              aria-label={`Technology used: ${tech}`}
             >
               {tech}
             </li>
