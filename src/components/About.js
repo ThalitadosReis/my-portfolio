@@ -1,21 +1,11 @@
 import React from "react";
+import SectionHeader from "./SectionHeader";
 
 export default function About() {
   return (
     <section className="section" id="about">
       <div className="container mx-auto">
-        {/* Header */}
-        <div className="flex flex-col items-end my-10">
-          <span className="absolute text-black-/50 text-xs uppercase">
-            About me
-          </span>
-          <div className="flex items-center w-full gap-3">
-            <div className="relative w-10 h-10 transform rotate-45 border border-black/10 flex items-center justify-center rounded-lg">
-              <span className="transform -rotate-45 text-sm">01</span>
-            </div>
-            <div className="flex-grow border-t border-black/10"></div>
-          </div>
-        </div>
+      <SectionHeader step="01" title="About me" />
 
         <div className="flex flex-col lg:flex-row items-center lg:items-start gap-10">
           <div className="flex-1 text-center lg:text-left">
