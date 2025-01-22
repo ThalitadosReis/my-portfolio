@@ -4,12 +4,12 @@
 
 @font-face {
   font-family: 'NewYork';
-  src: url('/public/fonts/NewYork.otf') format('opentype');
+  src: url('./assets/fonts/NewYork.otf') format('opentype');
 }
 
 @font-face {
   font-family: 'Kanit';
-  src: url('/public/fonts/Kanit-Light.ttf') format('opentype');
+  src: url('./assets/fonts/Kanit-Light.ttf') format('opentype');
 }
 
 
